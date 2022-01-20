@@ -18,38 +18,24 @@ export default function Chat(props) {
     const [channelDetail, setChannelDetail] = useState("");
     const [deleteIsclosed, setDeleteIsClosed] = useState(true);
 
-
-  
     
     useEffect(() => {
-
-        let getConv = () => {
-
-            axios.get(`https://slack-clone-backend-1.herokuapp.com/channel/${roomId}`).then((response) => {
-                
-    
-                setChannelDetail(response.data.name);
-                setMessagesList(response.data.messages);
-                
-    
-            })
-        };
-
-        if (roomId) {
-
-            getConv();
-
-
-        }
         
 
-      }, [roomId])
+        axios.get(`https://slack-clone-backend-1.herokuapp.com/channel/${roomId}`).then((response) => {
+            
+
+            setChannelDetail(response.data.name);
+            setMessagesList(response.data.messages);
+            
+
+        })}, [messagesList, roomId])
 
 
 
-    function deleteChannel() {
+    const deleteChannel = () => {
 
-        axios.delete(`https://slack-clone-backend-1.herokuapp.com/deleteChannel/${roomId}`)
+        axios.delete(`https://slack-clone-backend-1.herokuapp.com/deleteChannel/${roomId}`);
         window.location.reload()
 
     }

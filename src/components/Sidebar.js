@@ -18,7 +18,6 @@ const clearChannelInput = () => {
 }
 
 
-const [openSidebar, setOpenSidebar] = useState(true)
 const [isClosed, setIsClosed] = useState(true);
 const [channelListClosed, setchannelListClosed] = useState(true)
 
@@ -59,9 +58,9 @@ setChannelsList([...channelsList, {name}])
 return (
         <div className='sidebar_main'>
 
-        <div className={openSidebar ? "sidebar" : "sidebar sidebarChannel__mobileOpen" } >
+        <div className="sidebar" >
 
-        <div className="openSidebar" onClick={() => setOpenSidebar(!openSidebar)}>
+        <div className="openSidebar">
 
             <MenuOpenOutlined />
         </div>

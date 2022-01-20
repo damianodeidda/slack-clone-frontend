@@ -21,12 +21,6 @@
     resize: horizontal;
   }
 
-  .sidebarChannel__mobileOpen {
-    transform: translateX(0);
-    z-index: 99;
-    transition: all 1s ease;
-  }
-
   .openSidebar {
     display: flex;
     position: relative;

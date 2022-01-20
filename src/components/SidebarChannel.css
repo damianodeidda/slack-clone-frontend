@@ -82,13 +82,6 @@
   animation: appear 150ms ease;
 }
 
-@media screen and (max-width: 865px) {
-  .sidebarChannel__popUpOpen {
-    left: 10rem;
-    width: 90%;
-  }
-}
-
 .sidebarChannel__popUpOpen:hover {
   background-color: rgb(245, 245, 245);
 }

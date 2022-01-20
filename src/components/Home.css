@@ -14,3 +14,21 @@
   border: 1px solid var(--slack-main-color);
   border-radius: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+  .home {
+    width: 60%;
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .home {
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .home h1 {
+    padding: 3rem;
+  }
+}
