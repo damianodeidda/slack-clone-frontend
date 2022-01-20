@@ -1,0 +1,131 @@
+.message {
+  display: flex;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: dotted 0.1px var(--slack-blue);
+  margin: 1rem;
+  position: relative;
+  width: 75%;
+  transition: all 500ms;
+  z-index: 1;
+  animation: appear 120ms ease;
+}
+
+@media screen and (max-width: 865px) {
+  .message {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.message:hover {
+  background-color: #f4f3f5;
+}
+
+.message__left {
+  display: flex;
+}
+
+.message__left > .MuiSvgIcon-root {
+  height: 50px;
+  width: auto;
+  color: var(--slack-blue);
+}
+
+.textArea {
+  padding: 0 1rem;
+}
+
+.textArea > h4 {
+  padding-bottom: 0.5rem;
+}
+
+.message__right {
+  display: flex;
+  align-items: flex-start;
+}
+
+.message__right .MuiSvgIcon-root {
+  cursor: pointer;
+  height: 2rem;
+  color: gray;
+}
+
+.message__right .MuiSvgIcon-root:hover {
+  color: #d83737;
+}
+
+.message__deletePopUp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 1.3rem;
+  right: 2rem;
+  background-color: var(--slack-white);
+  color: var(--slack-color-dark);
+  border: 1px solid var(--slack-color-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+}
+
+.message__deletePopUp_hidden {
+  display: none;
+}
+
+.message__deletePopUp button {
+  padding: 0.3rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 10px;
+}
+
+.yes_delete {
+  color: var(--slack-white);
+  background-color: var(--slack-blue);
+  cursor: pointer;
+  border: none;
+  border: 1px solid var(--slack-blue);
+}
+
+.yes_delete:hover {
+  opacity: 0.8;
+}
+
+.no_delete {
+  background-color: var(--slack-white);
+  color: var(--slack-color-dark);
+  cursor: pointer;
+  border: 1px solid var(--slack-color-dark);
+}
+
+.no_delete:hover {
+  background-color: rgb(241, 241, 241);
+  color: var(--slack-color-dark);
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 865px) {
+  .message__left > .MuiSvgIcon-root {
+    width: 35px;
+  }
+
+  .message {
+    margin-right: 0;
+  }
+}

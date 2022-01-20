@@ -1,0 +1,196 @@
+.chat {
+  margin-bottom: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  padding: 2rem 1rem;
+  width: 100%;
+  left: 18rem;
+  overflow-x: hidden;
+}
+
+.chat__header {
+  display: flex;
+  align-items: center;
+  background-color: var(--slack-white);
+  opacity: 0.9;
+  position: fixed;
+  top: 3rem;
+  width: 75%;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid var(--slack-color-dark);
+  z-index: 2;
+  padding-left: 2rem;
+  justify-content: space-between;
+}
+
+.chat__headerName > .MuiSvgIcon-root {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: var(--slack-color-dark);
+}
+
+.chat__headerName {
+  display: flex;
+  align-items: center;
+}
+
+.chat__headerDelete {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  cursor: pointer;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.chat__headerDelete:hover {
+  color: #d83737;
+  opacity: 1;
+}
+
+.chat__headerDelete h4 {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.chat__messagesArea {
+  position: relative;
+  padding-bottom: 5rem;
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.chat__headerDeletePopup {
+  position: absolute;
+  background-color: rgb(248, 248, 248);
+  opacity: 0.95;
+  width: 20rem;
+  height: 15rem;
+  right: 0;
+  top: 3.5rem;
+  border: 1px solid var(--slack-color-dark);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat__headerDeletePopup h2 {
+  display: flex;
+  margin: 0 auto;
+}
+
+.chat__headerDeletePopup_closed {
+  display: none;
+}
+
+.chat__headerDeletePopup .MuiSvgIcon-root {
+  margin-bottom: 2rem;
+  width: 4rem;
+  height: 4rem;
+  color: #eb3b3b;
+}
+
+.chat__headerDeletePopup_buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat__headerDeletePopup_buttons button {
+  padding: 0.7rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 10px;
+}
+
+.yes_deleteChannel {
+  color: var(--slack-white);
+  background-color: var(--slack-blue);
+  cursor: pointer;
+  border: none;
+  border: 1px solid var(--slack-blue);
+}
+
+.yes_deleteChannel:hover {
+  opacity: 0.8;
+}
+
+.no_deleteChannel {
+  background-color: var(--slack-white);
+  color: var(--slack-color-dark);
+  cursor: pointer;
+  border: 1px solid var(--slack-color-dark);
+}
+
+.no_deleteChannel:hover {
+  background-color: rgb(241, 241, 241);
+  color: var(--slack-color-dark);
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1300px) {
+  .chat__header {
+    width: 70%;
+  }
+
+  .chat__messagesArea {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 977px) {
+  .chat__header {
+    width: 65%;
+  }
+
+  .chat__messagesArea {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .chat {
+    width: 100%;
+    left: 2rem;
+  }
+
+  .chat__header {
+    width: 85%;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .chat__headerDelete h4 {
+    display: none;
+  }
+
+  .chat__messagesArea {
+    width: 115%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .chat {
+    width: 110%;
+    left: 0rem;
+  }
+
+  .chat__headerDeletePopup {
+    right: 3rem;
+  }
+
+  .chat__header {
+    width: 95%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .chat__messagesArea {
+    width: 120%;
+    padding-left: 0.5rem;
+  }
+}

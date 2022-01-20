@@ -1,0 +1,63 @@
+.chatInput {
+  border: 2px solid var(--slack-color-dark);
+  border-radius: 15px;
+  width: 71%;
+  position: fixed;
+  bottom: 1.5rem;
+  background-color: var(--slack-white);
+  display: flex;
+  left: 20rem;
+  z-index: 2;
+  align-items: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .chatInput {
+    margin: 0;
+    max-width: 60%;
+    left: 20rem;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .chatInput {
+    margin: 0;
+    left: 2rem;
+    min-width: 85%;
+  }
+}
+
+.form__Input {
+  font-family: "lato";
+  font-size: 1rem;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 99%;
+  margin: 0.5rem 0.5rem;
+}
+
+.form__Input::placeholder {
+  font-family: "lato";
+}
+
+.chatInput button {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--slack-blue);
+  background-color: var(--slack-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--slack-color-dark);
+}
+
+.chatInput button:hover {
+  background-color: var(--slack-blue);
+  color: var(--slack-white);
+}

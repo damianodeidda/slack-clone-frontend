@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --slack-main-color: #350d36;
+  --slack-white: #fffeff;
+  --slack-color-dark: #2d0a2e;
+  --slack-color-search: #5e3f5f;
+  --slack-color-clear: #3f0e40;
+  --slack-blue: #146ea6;
+  --desktop-padding: 0.7rem 1rem;
+  --mobile-padding: 0.7rem 1rem;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  background-color: var(--slack-white);
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.app__body {
+  display: flex;
+  justify-content: space-between;
+  max-height: 100vh;
+}
+
+@media screen and (max-width: 850px) {
+  .app__body {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

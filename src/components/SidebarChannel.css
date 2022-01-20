@@ -1,0 +1,102 @@
+.sidebarChannel {
+  display: flex;
+  padding: 0.3rem 1.5rem;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.sidebarChannel_main {
+  display: block;
+}
+
+.sidebarChannel__infos .MuiSvgIcon-root {
+  margin-right: 0.5rem;
+}
+
+.sidebarChannel:hover {
+  background-color: var(--slack-color-dark);
+}
+
+.sidebarChannel__infos > p {
+  text-decoration: none;
+  font-weight: 300;
+  color: var(--slack-white);
+}
+
+.sidebarChannel__infos p:hover {
+  opacity: 0.8;
+}
+
+.sidebarChannel__infos {
+  display: flex;
+  align-items: center;
+  color: var(--slack-white);
+  animation: appear 200ms ease;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+}
+
+.sidebarChannel__deleteButton {
+  z-index: 99;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+.sidebarChannel__deleteButton .MuiSvgIcon-root {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sidebarChannel__deleteButton:hover {
+  background-color: var(--slack-color-search);
+}
+
+.sidebarChannel__popUpOpen {
+  background-color: var(--slack-white);
+  color: var(--slack-color-dark);
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  left: 15rem;
+  width: 70%;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid var(--slack-color-dark);
+  animation: appear 150ms ease;
+}
+
+@media screen and (max-width: 865px) {
+  .sidebarChannel__popUpOpen {
+    left: 10rem;
+    width: 90%;
+  }
+}
+
+.sidebarChannel__popUpOpen:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.sidebarChannel__popUpClosed {
+  display: none;
+}
+
+.sidebarChannel__popUpOpen .MuiSvgIcon-root {
+  margin-right: 1rem;
+}

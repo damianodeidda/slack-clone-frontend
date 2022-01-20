@@ -1,0 +1,235 @@
+.sidebar {
+  background-color: var(--slack-color-clear);
+  color: var(--slack-white);
+  min-height: 95vh;
+  width: 18rem;
+  position: fixed;
+  top: 2.5rem;
+  z-index: 9;
+}
+
+.openSidebar {
+  display: none;
+}
+
+@media screen and (max-width: 865px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    z-index: 99;
+    width: 14rem;
+    resize: horizontal;
+  }
+
+  .sidebarChannel__mobileOpen {
+    transform: translateX(0);
+    z-index: 99;
+    transition: all 1s ease;
+  }
+
+  .openSidebar {
+    display: flex;
+    position: relative;
+    top: 0.5rem;
+    left: 14rem;
+    padding: 0.5rem;
+    color: var(--slack-white);
+    background-color: var(--slack-color-clear);
+    z-index: 99;
+    cursor: pointer;
+    justify-content: flex-end;
+    width: 40px;
+  }
+
+  .openSidebar .MuiSvgIcon-root:hover {
+    opacity: 0.8;
+  }
+
+  .openSidebar .MuiSvgIcon-root {
+    color: var(--slack-white);
+    display: flex;
+  }
+
+  .sidebar__header {
+    top: 1rem;
+  }
+
+  .sidebar:hover {
+    transform: translateX(0%);
+  }
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: relative;
+  top: 0rem;
+  margin-bottom: 0.5rem;
+  border-bottom: solid 1px var(--slack-color-search);
+  z-index: 99;
+}
+
+.sidebar__header > .MuiSvgIcon-root {
+  background-color: var(--slack-white);
+  color: var(--slack-main-color);
+  height: 30px;
+  margin-left: 1rem;
+  padding: 0.3rem;
+  width: auto;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.sidebarChannels__header {
+  display: flex;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.sidebarChannels__header:hover {
+  background-color: var(--slack-color-dark);
+}
+
+.sidebarChannels__header > .MuiSvgIcon-root {
+  margin-right: 0.5rem;
+}
+
+.sidebarChannels__addChannel {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  align-items: center;
+}
+
+.sidebarChannels__addChannel > input {
+  margin-right: 1rem;
+  height: 20px;
+}
+
+.sidebarChannels__addChannel > button {
+  margin-left: 0.5rem;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.sidebarChannels__addChannel > button > .MuiSvgIcon-root {
+  color: var(--slack-color-dark);
+}
+
+.popup__newChannel_closed {
+  display: none;
+}
+
+.popup__newChannel_open {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: var(--slack-color-clear);
+  padding: 1rem;
+  z-index: 99;
+  transition: all 1s;
+  animation: appear 100ms ease;
+}
+
+.popup__newChannel_open {
+  align-items: center;
+  color: var(--slack-white);
+}
+
+.popup__newChannel_open input {
+  min-height: 2rem;
+  width: 100%;
+  padding-left: 0.5rem;
+}
+
+.add_channel {
+  margin-top: 2rem;
+}
+
+.popup__newChannel_open .MuiSvgIcon-root {
+  cursor: pointer;
+  margin: 0 1rem;
+  background-color: var(--slack-color-search);
+}
+
+.popup__newChannel_open .MuiSvgIcon-root:hover {
+  opacity: 0.5;
+}
+
+.channelList_closed {
+  display: none;
+}
+
+.sidebar_deleteWindow {
+  left: 40%;
+  position: absolute;
+  background-color: rgb(248, 248, 248);
+  opacity: 0.95;
+  width: 20rem;
+  height: 15rem;
+  top: 10rem;
+  border: 1px solid var(--slack-color-dark);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--slack-color-dark);
+  z-index: 99;
+}
+
+.sidebar_deleteWindow h2 {
+  display: flex;
+  margin: 0 auto;
+}
+
+.sidebar_deleteWindow .MuiSvgIcon-root {
+  margin-bottom: 2rem;
+  width: 4rem;
+  height: 4rem;
+  color: #eb3b3b;
+}
+
+.sidebar_deleteWindow_buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar_deleteWindow_buttons button {
+  padding: 0.7rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 10px;
+}
+
+.yes_deleteChannel {
+  color: var(--slack-white);
+  background-color: var(--slack-blue);
+  cursor: pointer;
+  border: none;
+  border: 1px solid var(--slack-blue);
+}
+
+.yes_deleteChannel:hover {
+  opacity: 0.8;
+}
+
+.no_deleteChannel {
+  background-color: var(--slack-white);
+  color: var(--slack-color-dark);
+  cursor: pointer;
+  border: 1px solid var(--slack-color-dark);
+}
+
+.no_deleteChannel:hover {
+  background-color: rgb(241, 241, 241);
+  color: var(--slack-color-dark);
+  opacity: 0.7;
+}
+
+.sidebar_deleteWindow_closed {
+  display: none;
+}

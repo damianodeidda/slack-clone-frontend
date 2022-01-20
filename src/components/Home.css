@@ -1,0 +1,16 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: 15%;
+  top: 15rem;
+}
+
+.home h1 {
+  position: relative;
+  color: var(--slack-main-color);
+  padding: 5rem;
+  border: 1px solid var(--slack-main-color);
+  border-radius: 10px;
+}
