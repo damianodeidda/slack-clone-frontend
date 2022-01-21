@@ -28,7 +28,7 @@ export default function Chat(props) {
             setMessagesList(response.data.messages);
             
 
-        })}, [messagesList])
+        })}, [messagesList, roomId])
 
 
 
