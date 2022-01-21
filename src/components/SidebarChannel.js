@@ -20,6 +20,7 @@ export default function SidebarChannel(props) {
 
         
         props.onDelete()
+    
 
     }
 
@@ -44,11 +45,13 @@ export default function SidebarChannel(props) {
        </div>
 
       
-
     <div className={isPopupClosed ? "sidebarChannel__popUpClosed" : "sidebarChannel__popUpOpen"} onClick={() => {deleteChannel(); setisPopupClosed(!isPopupClosed) }}>
+    <a href='https://slack-clone-portfolio.netlify.app/'>
     <DeleteOutline />
-    <p>Elimina il canale {props.title}?</p>
+    <p>Elimina il canale {props.title}</p>
+    </a>
     </div>
+    
 
 
 

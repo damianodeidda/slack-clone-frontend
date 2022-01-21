@@ -22,11 +22,19 @@ const [isClosed, setIsClosed] = useState(true);
 const [channelListClosed, setchannelListClosed] = useState(true)
 
 
-const deleteSidebarChannel = () => {
+const deleteSidebarChannel = (props) => {
 
     window.location.reload();
 
     console.log("ttasto triggerato")
+
+
+    setChannelsList(channelsList => {
+
+        return channelsList.filter((id, index) => {
+            return index !== props.id
+        })
+       })
 
 }
 
@@ -83,7 +91,7 @@ return (
                 
                 <div className={channelListClosed ? "channelList_open" : "channelList_closed"}>
 
-                {channelsList.map((channel) =>{
+                {channelsList.map((channel, id) =>{
 
                     return (
               

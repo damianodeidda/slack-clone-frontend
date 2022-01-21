@@ -18,7 +18,10 @@ function App() {
     <Sidebar />
     <Routes>
     
-      
+    <Route path='/' component={() => { 
+     window.location.href = 'https://slack-clone-portfolio.netlify.app'; 
+     return null;
+}}/>
       <Route path="/" element={<Home />} />
       <Route path="/rooms/:roomId" element={<Chat />} />
   

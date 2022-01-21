@@ -7,7 +7,6 @@ import { TagOutlined } from '@mui/icons-material'
 import { useState } from 'react'
 import axios from 'axios'
 import { DeleteOutline, HighlightOffOutlined } from '@material-ui/icons'
-import { Link } from 'react-router-dom'
 
 
 export default function Chat(props) {
@@ -29,14 +28,14 @@ export default function Chat(props) {
             setMessagesList(response.data.messages);
             
 
-        })}, [messagesList, roomId])
+        })}, [messagesList])
 
 
 
     const deleteChannel = () => {
 
         axios.delete(`https://slack-clone-backend-1.herokuapp.com/deleteChannel/${roomId}`);
-        window.location.reload()
+        
 
     }
 
@@ -51,6 +50,7 @@ export default function Chat(props) {
             <TagOutlined /> <h2> {channelDetail}</h2>
             </div>
 
+            
             <div className='chat__headerDelete' onClick={() => setDeleteIsClosed(!deleteIsclosed)}>
                 <DeleteOutline />
                 <h4> Elimina Canale </h4>
@@ -61,9 +61,9 @@ export default function Chat(props) {
             <HighlightOffOutlined />
                 <h2> Eliminare il canale {channelDetail}? </h2>
                 <div className='chat__headerDeletePopup_buttons'>  
-                <Link to="/">
+                <a href='https://slack-clone-portfolio.netlify.app/'>
                 <button className="yes_deleteChannel" onClick={()=> {deleteChannel(); setDeleteIsClosed(!deleteIsclosed);}}>Si</button>
-                </Link>
+                </a>
                 <button className="no_deleteChannel" onClick={() => setDeleteIsClosed(!deleteIsclosed)}>No</button>
                 </div>
             </div>
