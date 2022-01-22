@@ -72,14 +72,19 @@
   position: absolute;
   align-items: center;
   justify-content: space-between;
-  left: 15rem;
-  width: 70%;
+  left: 13rem;
+  width: 14rem;
   padding: 0.5rem 1rem;
   z-index: 1000;
   cursor: pointer;
   border-radius: 10px;
   border: 1px solid var(--slack-color-dark);
   animation: appear 150ms ease;
+}
+
+a {
+  display: flex;
+  align-items: center;
 }
 
 .sidebarChannel__popUpOpen:hover {
