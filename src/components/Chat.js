@@ -19,6 +19,8 @@ export default function Chat(props) {
 
     
     useEffect(() => {
+
+        if (roomId) {
         
 
         axios.get(`https://slack-clone-backend-1.herokuapp.com/channel/${roomId}`).then((response) => {
@@ -27,9 +29,9 @@ export default function Chat(props) {
             setChannelDetail(response.data.name);
             setMessagesList(response.data.messages);
             
+        
 
-        })}, [messagesList, roomId])
-
+        })}}, [messagesList, roomId])
 
 
     const deleteChannel = () => {
@@ -68,10 +70,9 @@ export default function Chat(props) {
                 </div>
             </div>
 
-
-            
             </div>
 
+<div className='messages__container'>
         {messagesList.map((messages) => {
 
             return (
@@ -87,7 +88,7 @@ export default function Chat(props) {
             )
          } )}
 
-
+</div>
         </div>
         <ChatInput />
         </div>

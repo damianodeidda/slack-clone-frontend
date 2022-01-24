@@ -58,9 +58,17 @@
 
 .chat__messagesArea {
   position: relative;
-  padding-bottom: 5rem;
-  padding-top: 2rem;
+  top: 0;
   width: 100%;
+  margin-top: 2rem;
+  overflow-y: scroll;
+}
+
+.messages__container {
+  position: sticky;
+  top: 2rem;
+  margin-bottom: 4rem;
+  overflow-y: scroll;
 }
 
 .chat__headerDeletePopup {
@@ -77,6 +85,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: appear 120ms ease;
 }
 
 .chat__headerDeletePopup h2 {
@@ -173,6 +182,12 @@
   }
 }
 
+@media screen and (max-width: 668px) {
+  .chat__messagesArea {
+    padding-top: 0;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .chat {
     width: 110%;
@@ -192,5 +207,20 @@
   .chat__messagesArea {
     width: 120%;
     padding-left: 0.5rem;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }

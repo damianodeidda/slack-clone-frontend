@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css';
-import { AccountCircleOutlined, InfoOutlined, ScheduleOutlined, SearchOutlined } from "@material-ui/icons"
+import { AccountCircleOutlined, GitHub, ScheduleOutlined, SearchOutlined } from "@material-ui/icons"
 
 
 export default function Header() {
@@ -18,7 +18,9 @@ export default function Header() {
         </div>
 
         <div className="header__right">
-           <InfoOutlined />
+            <a href='https://github.com/damianodeidda/slack-clone'>
+           <GitHub />
+           </a>
            <AccountCircleOutlined />
            <p>ciao, user1</p>
         </div>

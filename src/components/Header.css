@@ -103,3 +103,12 @@
     display: none;
   }
 }
+
+.header__right > a {
+  color: var(--slack-white);
+  padding-right: 1rem;
+}
+
+.header > a:hover {
+  opacity: 0.8;
+}
